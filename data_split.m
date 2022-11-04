@@ -13,14 +13,14 @@ if b==d
     r=b*input_perc;%no of datas required
     r=round(r);
     re=b-r;%no of datas removed
-    r_ = randi([1 b],1,re);
+    r_ = randperm(b,re);
     columnIndicesToDelete = [r_];
     p1(:,columnIndicesToDelete)=[];
     t1(:,columnIndicesToDelete)=[];
-    p1=p1';
-    t1=t1';
+    p2=p1';
+    t2=t1';
 end
-xlswrite('input_Power_70.xlsx',p1);
-xlswrite('output_Power_70.xlsx',t1);
+xlswrite('input_70.xlsx',p2);
+xlswrite('output_70.xlsx',t2);
 
     
